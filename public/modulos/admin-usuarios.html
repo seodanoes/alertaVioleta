@@ -1,0 +1,44 @@
+
+<main id="contenido">
+
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Gestión de cuentas</h1>
+    <p class="intro">Da de alta asesoras y administradoras, cambia tipos de cuenta, desactiva o elimina cuentas y cierra sesiones.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="contenedor">
+    <div class="herramientas">
+      <div class="campo"><label for="filtroBuscar">Buscar</label><input type="search" id="filtroBuscar" placeholder="Palabra clave o correo"></div>
+      <div class="campo"><label for="filtroRol">Tipo de cuenta</label>
+        <select id="filtroRol"><option value="">Todas</option><option value="usuaria">Usuaria</option><option value="asesora">Asesora</option><option value="admin">Administración</option></select></div>
+      <button type="button" class="btn btn-primario" id="btnNuevoUsuario">Nueva cuenta</button>
+    </div>
+    <p id="conteoUsuarios" aria-live="polite"></p>
+
+    <div class="panel-caja" id="panelUsuario" hidden>
+      <h2 id="tituloFormUsuario">Nueva cuenta</h2>
+      <form id="formUsuario" class="form-plano" data-validar data-manual data-confirmar-password="uPassword,uConfirmar" novalidate autocomplete="off">
+        <div class="campo"><label for="uCodigo">Palabra clave</label><input type="text" id="uCodigo" data-regla="codigoSeguro" required><span class="mensaje-error-campo">Ingresa una palabra clave de 3 a 30 caracteres.</span></div>
+        <div class="campo"><label for="uCorreo">Correo electrónico</label><input type="email" id="uCorreo" data-regla="correo" required><span class="mensaje-error-campo">Escribe un correo válido.</span></div>
+        <div class="campo"><label for="uRol">Tipo de cuenta</label>
+          <select id="uRol" data-regla="rol" required><option value="usuaria">Usuaria</option><option value="asesora">Asesora</option><option value="admin">Administración</option></select>
+          <span class="mensaje-error-campo">Selecciona un tipo de cuenta.</span></div>
+        <div class="campo"><label for="uEstado">Estado</label>
+          <select id="uEstado" data-regla="estadoCuenta" required><option value="activo">Activa</option><option value="inactivo">Desactivada</option></select>
+          <span class="mensaje-error-campo">Selecciona un estado.</span></div>
+        <div class="campo"><label for="uPassword">Contraseña</label><input type="password" id="uPassword" data-regla="password" autocomplete="new-password" data-medidor>
+          <span class="ayuda-campo" id="ayudaPassUsuario"></span><span class="mensaje-error-campo">La contraseña no cumple el formato solicitado.</span></div>
+        <div class="campo"><label for="uConfirmar">Confirmar contraseña</label><input type="password" id="uConfirmar" autocomplete="new-password"><span class="mensaje-error-campo">Las contraseñas no coinciden.</span></div>
+        <div class="acciones"><button type="submit" class="btn btn-primario">Guardar</button><button type="button" class="btn btn-secundario" id="btnCancelarUsuario">Cancelar</button></div>
+      </form>
+    </div>
+
+    <div class="tabla-scroll"><table class="tabla-datos">
+      <thead><tr><th>Cuenta</th><th>Tipo</th><th>Estado</th><th>Sesiones</th><th>Último acceso</th><th>Acciones</th></tr></thead>
+      <tbody id="tablaUsuarios"></tbody>
+    </table></div>
+  </div>
+</section>
+</main>

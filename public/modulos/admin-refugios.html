@@ -1,0 +1,35 @@
+<div class="avisos" id="avisos" aria-live="polite"></div>
+
+<noscript><div class="avisos"><p class="alerta aviso">Esta sección necesita JavaScript para verificar tu sesión. Actívalo en tu navegador para continuar.</p></div></noscript>
+<main id="contenido">
+
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Gestión de refugios</h1>
+    <p class="intro">Administra los espacios que aparecen en la <a href="mapa-refugios.html">Red de Refugios</a>. Marca como confidencial cualquier espacio cuya ubicación no deba mostrarse.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="contenedor">
+    <div class="herramientas"><button type="button" class="btn btn-primario" id="btnNuevoRefugio">Nuevo espacio</button></div>
+    <div class="panel-caja" id="panelRefugio" hidden>
+      <h2 id="tituloFormRefugio">Nuevo espacio</h2>
+      <form id="formRefugio" class="form-plano" data-validar data-manual novalidate autocomplete="off">
+        <div class="campo"><label for="rNombre">Nombre</label><input type="text" id="rNombre" data-regla="nombreRefugio" required><span class="mensaje-error-campo">Escribe un nombre de 3 a 80 caracteres.</span></div>
+        <div class="campo"><label for="rTipo">Tipo de espacio</label>
+          <select id="rTipo" data-regla="tipoRefugio" required><option value="Módulo de atención">Módulo de atención</option><option value="Casa de resguardo">Casa de resguardo</option><option value="Punto violeta">Punto violeta</option></select>
+          <span class="mensaje-error-campo">Selecciona un tipo de espacio.</span></div>
+        <div class="campo"><label for="rHorario">Horario (opcional)</label><input type="text" id="rHorario" data-regla="horario" placeholder="24 h"><span class="mensaje-error-campo">Escribe un horario de 3 a 60 caracteres.</span></div>
+        <div class="campo"><label for="rTelefono">Teléfono (opcional)</label><input type="tel" id="rTelefono" data-regla="telefono" inputmode="numeric" placeholder="10 dígitos"><span class="mensaje-error-campo">El teléfono debe tener exactamente 10 dígitos, sin espacios.</span></div>
+        <div class="campo"><label for="rDescripcion">Descripción</label><textarea id="rDescripcion" rows="3" data-regla="descripcionCorta" required></textarea><span class="ayuda-campo">Entre 10 y 300 caracteres.</span><span class="mensaje-error-campo">Escribe entre 10 y 300 caracteres.</span></div>
+        <div class="campo"><label class="checkbox-linea" for="rConfidencial"><input type="checkbox" id="rConfidencial"><span>Ubicación confidencial (no se muestra el teléfono públicamente)</span></label></div>
+        <div class="acciones"><button type="submit" class="btn btn-primario">Guardar</button><button type="button" class="btn btn-secundario" id="btnCancelarRefugio">Cancelar</button></div>
+      </form>
+    </div>
+    <div class="tabla-scroll"><table class="tabla-datos">
+      <thead><tr><th>Nombre</th><th>Tipo</th><th>Horario</th><th>Visibilidad</th><th>Acciones</th></tr></thead>
+      <tbody id="tablaRefugios"></tbody>
+    </table></div>
+  </div>
+</section>
+</main>

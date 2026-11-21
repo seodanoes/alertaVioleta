@@ -1,0 +1,24 @@
+<main id="contenido">
+
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Hola, <span id="nombrePanel"></span></h1>
+    <p class="intro">Vista general de cuentas, sesiones y atención del buzón.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="contenedor">
+    <div class="panel-rejilla" id="datosAdmin"></div>
+    <div class="acciones" style="margin:0 0 36px">
+      <a class="btn btn-primario" href="admin-usuarios.html">Gestionar cuentas</a>
+      <a class="btn btn-secundario" href="admin-refugios.html">Gestionar refugios</a>
+      <a class="btn btn-secundario" href="bandeja-buzon.html">Bandeja del buzón</a>
+    </div>
+    <h2>Sesiones abiertas en el sitio</h2>
+    <div class="tabla-scroll"><table class="tabla-datos">
+      <thead><tr><th>Cuenta</th><th>Tipo</th><th>Dispositivo</th><th>Última actividad</th><th>Acción</th></tr></thead>
+      <tbody id="tablaSesiones"></tbody>
+    </table></div>
+  </div>
+</section>
+</main>

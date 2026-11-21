@@ -1,0 +1,47 @@
+<main id="contenido">
+
+<div class="contenedor disposicion-form">
+  <div class="texto">
+    <h1>Crear una cuenta</h1>
+    <p>Puedes registrarte usando una palabra clave en lugar de tu nombre real, si así te sientes más segura.</p>
+    <ul class="lista-notas">
+      <li>El registro abierto crea cuentas de usuaria. Las cuentas de asesora y de administración las da de alta la administración.</li>
+      <li>Al terminar, tu sesión inicia automáticamente.</li>
+      <li>Tus contraseñas se guardan cifradas, nunca en texto legible.</li>
+    </ul>
+  </div>
+  <form class="form-card" id="formRegistro" data-validar data-manual data-confirmar-password="password,confirmarPassword" novalidate>
+    <div class="campo">
+      <label for="codigoSeguro">Palabra clave (en vez de tu nombre)</label>
+      <input type="text" id="nombre" name="nombre" data-regla="nombre" required autocomplete="off">
+      <span class="mensaje-error-campo">Ingresa una palabra clave de 3 a 30 caracteres.</span>
+    </div>
+    <div class="campo">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" data-regla="correo" required autocomplete="email">
+      <span class="ayuda-campo">Puedes usar un correo nuevo si lo prefieres, por seguridad.</span>
+      <span class="mensaje-error-campo">Escribe un correo válido.</span>
+    </div>
+      <div class="campo">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" data-regla="password" required autocomplete="new-password" data-medidor>
+        <span class="ayuda-campo">8 a 30 caracteres, con al menos una letra y un número.</span>
+        <span class="mensaje-error-campo">La contraseña no cumple el formato solicitado.</span>
+      </div>
+    <div class="campo">
+      <label for="confirmarPassword">Confirmar contraseña</label>
+      <input type="password" id="confirmarPassword" name="confirmarPassword" required autocomplete="new-password">
+      <span class="mensaje-error-campo">Las contraseñas no coinciden.</span>
+    </div>
+    <div class="campo">
+      <label class="checkbox-linea">
+        <input type="checkbox" data-consentimiento required>
+        <span>Entiendo que puedo usar una identidad reservada y que mis datos se tratan de forma confidencial.</span>
+      </label>
+      <span class="mensaje-error-campo">Debes aceptar este punto para continuar.</span>
+    </div>
+    <button type="submit" class="btn btn-primario">Crear cuenta</button>
+    <p class="enlaces-form" style="margin:18px 0 0">¿Ya tienes cuenta? <a href="login">Iniciar sesión</a></p>
+  </form>
+</div>
+</main>

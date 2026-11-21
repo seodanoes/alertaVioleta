@@ -1,0 +1,37 @@
+
+<main id="contenido">
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Contáctanos</h1>
+    <p class="intro">Escríbenos si tienes una duda general sobre el sitio. Para pedir ayuda de forma anónima, usa el <a href="buzon.html">buzón</a>.</p>
+  </div>
+</div><section class="seccion">
+  <div class="contenedor">
+
+    <form class="form-card" data-validar novalidate>
+      <div class="campo">
+        <label for="nombreContacto">Nombre (opcional)</label>
+        <input type="text" id="nombreContacto" name="nombre" data-regla="nombre" autocomplete="name">
+        <span class="mensaje-error-campo">Escribe solo letras y espacios (2 a 60 caracteres).</span>
+      </div>
+      <div class="campo">
+        <label for="correoContacto">Correo electrónico</label>
+        <input type="email" id="correoContacto" name="correo" data-regla="correo" required autocomplete="email">
+        <span class="mensaje-error-campo">Escribe un correo válido.</span>
+      </div>
+      <div class="campo">
+        <label for="telefonoContacto">Teléfono (opcional)</label>
+        <input type="tel" id="telefonoContacto" name="telefono" data-regla="telefono" placeholder="10 dígitos" inputmode="numeric" autocomplete="tel">
+        <span class="mensaje-error-campo">El teléfono debe tener 10 dígitos.</span>
+      </div>
+      <div class="campo">
+        <label for="mensajeContacto">Mensaje</label>
+        <textarea id="mensajeContacto" name="mensaje" rows="5" data-regla="mensajeTexto" required></textarea>
+        <span class="ayuda-campo">Entre 10 y 600 caracteres.</span>
+        <span class="mensaje-error-campo">Escribe entre 10 y 600 caracteres.</span>
+      </div>
+      <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+</main>

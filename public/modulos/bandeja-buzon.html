@@ -1,0 +1,20 @@
+
+<main id="contenido">
+
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Bandeja del buzón</h1>
+    <p class="intro">Mensajes anónimos recibidos. Cambia su estado, agrega notas internas o elimínalos cuando ya no sean necesarios.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="contenedor">
+    <div class="herramientas">
+      <div class="campo"><label for="filtroEstado">Estado</label>
+        <select id="filtroEstado"><option value="">Todos</option><option value="nuevo">Nuevos</option><option value="en-atencion">En atención</option><option value="atendido">Atendidos</option></select></div>
+    </div>
+    <p id="conteoMensajes" aria-live="polite"></p>
+    <div id="listaMensajes"></div>
+  </div>
+</section>
+</main>

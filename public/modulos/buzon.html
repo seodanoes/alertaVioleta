@@ -1,0 +1,27 @@
+<main id="contenido">
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Buzón</h1>
+    <p class="intro">Usa este espacio para dejar un mensaje, una duda o un reporte. No es necesario que uses tu nombre real, y tu mensaje nunca se vincula a tu cuenta.</p>
+  </div>
+</div><section class="seccion">
+  <div class="contenedor">
+
+    <form class="form-card" id="formBuzon" data-validar data-manual novalidate autocomplete="off">
+      <div class="campo">
+        <label for="codigoBuzon">Palabra clave (opcional)</label>
+        <input type="text" id="codigoBuzon" name="codigoSeguro" data-regla="codigoSeguro" autocomplete="off">
+        <span class="ayuda-campo">Déjalo en blanco si prefieres enviarlo de forma completamente anónima.</span>
+        <span class="mensaje-error-campo">Ingresa una palabra clave de 3 a 30 caracteres.</span>
+      </div>
+      <div class="campo">
+        <label for="mensajeBuzon">Tu mensaje</label>
+        <textarea id="mensajeBuzon" name="mensaje" rows="5" data-regla="mensajeTexto" required autocomplete="off"></textarea>
+        <span class="ayuda-campo">Entre 10 y 600 caracteres.</span>
+        <span class="mensaje-error-campo">Escribe entre 10 y 600 caracteres.</span>
+      </div>
+      <button type="submit" class="btn btn-primario">Enviar al buzón</button>
+    </form>
+  </div>
+</section>
+</main>

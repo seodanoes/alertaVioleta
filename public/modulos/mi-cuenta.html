@@ -1,0 +1,76 @@
+
+<main id="contenido">
+
+<div class="encabezado-pagina">
+  <div class="contenedor">
+    <h1>Mi cuenta</h1>
+    <p class="intro">Tus datos, tu contraseña y las sesiones abiertas en tus dispositivos.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="contenedor dos-col">
+    <div>
+      <div class="panel-caja">
+        <h2>Mis sesiones</h2>
+        <p id="resumenSesiones"></p>
+        <div id="listaSesiones"></div>
+        <p style="margin-top:16px"><button type="button" class="btn btn-secundario" id="btnCerrarOtras">Cerrar las demás sesiones</button></p>
+      </div>
+      <div class="panel-caja">
+        <h2>Cambiar contraseña</h2>
+        <form class="form-plano" id="formPassword" data-validar data-manual data-confirmar-password="passwordNueva,confirmarNueva" novalidate>
+      <div class="campo">
+        <label for="passwordActual">Contraseña actual</label>
+        <input type="password" id="passwordActual" name="actual" data-regla="requerido" required autocomplete="current-password">
+        <span class="mensaje-error-campo">Este campo es obligatorio.</span>
+      </div>      <div class="campo">
+        <label for="passwordNueva">Contraseña nueva</label>
+        <input type="password" id="passwordNueva" name="nueva" data-regla="password" required autocomplete="new-password" data-medidor>
+        <span class="ayuda-campo">8 a 30 caracteres, con al menos una letra y un número.</span>
+        <span class="mensaje-error-campo">La contraseña no cumple el formato solicitado.</span>
+      </div>
+          <div class="campo">
+            <label for="confirmarNueva">Confirmar contraseña nueva</label>
+            <input type="password" id="confirmarNueva" name="confirmar" required autocomplete="new-password">
+            <span class="mensaje-error-campo">Las contraseñas no coinciden.</span>
+          </div>
+          <p class="ayuda-campo">Al cambiarla se cerrarán tus sesiones en otros dispositivos.</p>
+          <button type="submit" class="btn btn-primario">Guardar contraseña</button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="panel-caja">
+        <h2>Mis datos</h2>
+        <div id="datosCuenta"></div>
+        <form class="form-plano" id="formAlias" data-validar data-manual novalidate>
+          <div class="campo">
+            <label for="aliasNuevo">Cambiar palabra clave</label>
+            <input type="text" id="aliasNuevo" name="alias" data-regla="codigoSeguro" required autocomplete="off">
+            <span class="mensaje-error-campo">Ingresa una palabra clave de 3 a 30 caracteres.</span>
+          </div>
+          <button type="submit" class="btn btn-secundario btn-chico">Guardar</button>
+        </form>
+      </div>
+      <div class="panel-caja">
+        <h2>Eliminar mi cuenta</h2>
+        <p>Se borrarán tu cuenta, tus sesiones y tu plan de seguridad. No se puede deshacer.</p>
+        <details class="faq" style="max-width:none"><summary>Quiero eliminar mi cuenta</summary>
+          <form class="form-plano" id="formEliminar" data-validar data-manual novalidate style="padding:0 20px 20px">
+      <div class="campo">
+        <label for="passwordEliminar">Confirma con tu contraseña</label>
+        <input type="password" id="passwordEliminar" name="eliminar" data-regla="requerido" required autocomplete="current-password">
+        <span class="mensaje-error-campo">Este campo es obligatorio.</span>
+      </div>
+            <div class="campo">
+              <label class="checkbox-linea"><input type="checkbox" data-consentimiento required><span>Entiendo que esta acción es permanente.</span></label>
+              <span class="mensaje-error-campo">Debes aceptar este punto para continuar.</span>
+            </div>
+            <button type="submit" class="btn btn-peligro">Eliminar mi cuenta</button>
+          </form>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
